@@ -1,2 +1,61 @@
+# === Python Basics ===
 __pycache__/
+*.py[cod]
+*$py.class
+
+# === Django Stuff ===
+*.log
+*.pot
 *.pyc
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+.env
+.env.*
+
+# === Migrations ===
+*/migrations/
+!*/migrations/__init__.py
+
+# === Virtualenv ===
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# === IDEs ===
+.vscode/
+.idea/
+
+# === Testing & Coverage ===
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+.nox/
+.mypy_cache/
+.pyre/
+
+# === OS-Specific ===
+.DS_Store
+Thumbs.db
+
+# === Packaging ===
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+MANIFEST
+
+# === Jupyter Notebook ===
+.ipynb_checkpoints
+
+# === Others ===
+*.bak
+*.swp
+*.tmp
