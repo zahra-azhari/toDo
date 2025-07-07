@@ -1,10 +1,12 @@
 from django.shortcuts import render
+from .models import Todo
 # from django.http import HttpResponse
 # Create your views here.
 
 
 def home (request):
-    return render(request,'home.html')
+    all=Todo.objects.all()
+    return render(request,'home.html',{'all':all})
 
 def say_hello(request):
     # person ={'name':'zahra'}

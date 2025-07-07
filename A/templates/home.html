@@ -5,6 +5,11 @@
     <title>Home</title>
 </head>
 <body>
-    <h3>Home page</h3>
+    {% for item in all %}
+        <h3>{{ item.title }}</h3>
+        <smal>{{ item.craeted }}</smal>
+         <p>{{ item.body }}</p>
+    {% endfor %}
+
 </body>
 </html>
