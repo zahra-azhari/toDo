@@ -4,7 +4,8 @@
 
 {% block content %}
     {% for item in all %}
-        <h3>{{ item.title }}</h3>
+        <a href="/detail/{{todo.id}}">{{todo.title}}</a>
+<!--        <h3>{{ item.title }}</h3>-->
 <!--        <smal>{{ item.craeted }}</smal>-->
 <!--         <p>{{ item.body }}</p>-->
     {% endfor %}
