@@ -3,10 +3,9 @@
 {% block title %} Home {% endblock %}
 
 {% block content %}
-    {% for item in all %}
-        <a href="/detail/{{todo.id}}">{{todo.title}}</a>
-<!--        <h3>{{ item.title }}</h3>-->
-<!--        <smal>{{ item.craeted }}</smal>-->
-<!--         <p>{{ item.body }}</p>-->
+
+    {% for todo in all %}
+        <a href="/detail/{{todo.id}}">{{todo.title}}</a><br/>
+
     {% endfor %}
 {% endblock %}
