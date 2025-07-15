@@ -4,8 +4,10 @@
 
 {% block content %}
 
-    {% for todo in all %}
-        <a href="/detail/{{todo.id}}">{{todo.title}}</a><br/>
+    <div class="card">
+        {% for todo in all %}
+            <a class="card-body" href="{% url 'details' todo.id %}">{{todo.title}}</a><br/>
 
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock %}
