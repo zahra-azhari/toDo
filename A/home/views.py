@@ -19,3 +19,6 @@ def delete(request,todo_id):
     Todo.objects.get(id=todo_id).delete()
     messages.success(request,'todo deleted succsesfully','success')
     return redirect('home')
+
+def create(request):
+    return render(request,'create.html')
