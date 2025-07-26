@@ -30,4 +30,4 @@ def create(request):
     else:
         form=TodoCreateForm()
 
-    return render(request,'create.html',{'form':form })
+    return render(request,'create.html',{'form':form  })
