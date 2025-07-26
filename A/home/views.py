@@ -23,5 +23,11 @@ def delete(request,todo_id):
     return redirect('home')
 
 def create(request):
-    form=TodoCreateForm()
+    if request.method=='POST':
+        form=TodoCreateForm(request.POST)
+        if form.is_valid():
+            pass
+    else:
+        form=TodoCreateForm()
+
     return render(request,'create.html',{'form':form })
