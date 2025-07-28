@@ -1,5 +1,8 @@
 from django import forms
+
+
+
 class TodoCreateForm(forms.Form):
-    title=forms.CharField(required=False,label="onvan")
+    title=forms.CharField()
     body=forms.CharField()
-    created=forms.DateTimeField()
+    # created=forms.DateTimeField()

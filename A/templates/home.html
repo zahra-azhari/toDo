@@ -5,7 +5,7 @@
 {% block content %}
 
     <div class="card">
-        {% for todo in all %}
+        {% for todo in todos %}
             <a class="card-body" href="{% url 'details' todo.id %}">{{todo.title}}</a><br/>
 
         {% endfor %}

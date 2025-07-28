@@ -9,7 +9,7 @@ from .forms import TodoCreateForm
 
 def home (request):
     all=Todo.objects.all()
-    return render(request,'home.html',{'all':all})
+    return render(request,'home.html',{'todos':all})
 
 
 
@@ -26,7 +26,10 @@ def create(request):
     if request.method=='POST':
         form=TodoCreateForm(request.POST)
         if form.is_valid():
-            pass
+            cd = form.cleaned_data
+            Todo.objects.create(title=cd['title'],body=cd['body'])
+            messages.success(request,'Todo created successfully','success')
+            return redirect('home')
     else:
         form=TodoCreateForm()
 
