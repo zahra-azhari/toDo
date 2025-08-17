@@ -4,6 +4,21 @@
 
 {% block content %}
 
+<!--    {% if request.user.is_authenticated %}-->
+<!--        <h2>Hello</h2>-->
+<!--    {% else %}-->
+<!--        <h2> wrong work </h2>-->
+<!--    {% endif %}-->
+
+
+<!--    <p>{{request.user }}</p>-->
+
+
+    <a href="{% url 'user_register' %}">Register</a>
+    <a href="{% url 'user_login' %}">login</a>
+    <a href="{% url 'user_logout' %}">logout</a>
+
+
     <div class="card">
         {% for todo in todos %}
             <a class="card-body" href="{% url 'details' todo.id %}">{{todo.title}}</a><br/>
